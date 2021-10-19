@@ -47,7 +47,7 @@
                 <p><label for="best_day">Which day is best?</label>
                     <input type="date" id="best_day" name="best_day">
                 <p><label for="bear">Which bear is best?<abbr title="required" aria-label="required">*</abbr></label>
-                    <select name="best_bear" id="bear">
+                    <select name="best_bear" id="bear" required>
                         <option value="">&#160;</option>
                         <option value="black">Black</option>
                         <option value="brown">Brown</option>
@@ -70,17 +70,17 @@
                             <label for="no">No</label><br />
                         </li>
                         <li>
-                            <input type="radio" id="none" name="radio_buttons" value="none" checked>
+                            <input type="radio" id="none" name="radio_buttons" value="?" checked>
                             <label for="none">None of your business</label>
                         </li>
                     </ul>
                 </fieldset>
 
                 <p><label for="life">What is the meaning of life?</label>
-                <p><textarea id="life" name="life_meaning" cols="50" rows="5"
+                <textarea id="life" name="life_meaning" cols="50" rows="5"
                         placeholder="Enter the correct answer here"></textarea></p>
 
-                <button type="submit">Send</button>
+                <p><button type="submit">Send</button></p>
             </form>
         </main>
 
