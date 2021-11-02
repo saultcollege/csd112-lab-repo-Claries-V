@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box;
+}
+::after,
+::before{
+  box-sizing: inherit;
+}
+  body {
+      background-color: #d5a5d6;
+      color: rgb(141, 7, 7);
+      
+  }
+  
+  .width-wrap{
+    background-color: rgba(255, 255, 255, 0.774);
+    margin: auto auto 3em auto;
+    box-sizing: border-box;
+    max-width: 960px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-top: unset;
+    padding: 0 2em 2em 2em;
+  }
+ 
+    h1,h2,h3 {
+    color: rgb(248, 8, 168);
+    }
+
+    a{
+        color: rgb(241, 139, 6);
+    }
+      
+    ::selection{
+      color: azure;
+      background-color: #b41717;
+    }
+
+    header{
+      border-top: 4px solid rgba(0,0,0,0.1);
+      margin-left: -2em;
+      margin-right: -2em;   
+  }
+
+  nav {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    box-sizing: inherit;   
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0.5em;
+}
+
+nav ul li a {
+  color: #fa7d08;
+  padding-top: 1em;
+  padding: 16px 8px;
+}
+
+nav ul li a:hover {
+  border-top: 4px solid #b41717;
+}
+
+  hr {
+    width: 50vw;
+    min-width: 300px;
+    max-width: 890px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    border: 0;
+    border-bottom: 3px dotted #800480;
+  }
+
+  dt::after {
+    content: ':';
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead, tfoot, tbody tr th{
+  background-color: rgba(0,0,0,0.2);
+}
+
+th, td {
+  border: 1px solid black;
+  padding:0.3em 1em;
+  }
+  
+  td {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  tbody tr:nth-child(even) {
+      background-color: rgba(0,0,0,0.15);
+  }
+  
+/* Form Styling */
+
+label {
+  display: block;
+}
+
+fieldset label {
+  display: inline;
+}
+
+*[type="submit"] {
+  border: none;
+  padding: 1em 3em;
+  background-color: #ca870a;
+  color: #dfe8d7;
+}
+
+input:invalid {
+  background-color: rgba(245, 212, 185, 0.137);
+}
+
+
+
+
+
+
+
+
+
+
