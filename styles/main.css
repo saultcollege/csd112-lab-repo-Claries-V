@@ -81,6 +81,16 @@ nav ul li a:hover {
     border: 0;
     border-bottom: 3px dotted #800480;
   }
+  
+  footer hr {
+    width: 50vw;
+    min-width: 300px;
+    max-width: 890px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    border: 0;
+    border-bottom: 3px dotted palevioletred;
+  }
 
   dt::after {
     content: ':';
