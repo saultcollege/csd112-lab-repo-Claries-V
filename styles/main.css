@@ -1,8 +1,9 @@
 html {
   box-sizing: border-box;
 }
-::after,
-::before{
+*,
+*::after,
+*::before{
   box-sizing: inherit;
 }
   body {
@@ -46,8 +47,6 @@ html {
     padding-right: 0em;
     margin-left: 2em;
     margin-right: 2em;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
     box-sizing: inherit;
 }
 
@@ -65,6 +64,10 @@ nav ul li {
 nav ul li a {
   color: #fa7d08;
   padding-top: 1em;
+  padding-bottom: 0.5em;
+  display: inline-block;
+  margin: -4px 1em 0 1em;
+  border-top: 4px solid transparent;
 }
 
 nav ul li a:hover {
@@ -99,7 +102,7 @@ table {
     border-collapse: collapse;
 }
 
-thead, tfoot, tbody tr th{
+thead td, tfoot td, th{
   background-color: rgba(0,0,0,0.2);
 }
 
@@ -112,7 +115,7 @@ th, td {
     background-color: rgba(0, 0, 0, 0.05);
   }
   
-  tbody tr:nth-child(even) {
+  tbody tr:nth-child(even) td {
       background-color: rgba(0,0,0,0.15);
   }
   
