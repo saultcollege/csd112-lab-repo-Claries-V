@@ -26,7 +26,15 @@ html {
   }
   ol {
     list-style-type:upper-roman;
-}
+  }
+  a {
+    color: rgb(248, 8, 168);;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
   .bio {
     column-count: 3;
     column-gap: 2em;
@@ -152,14 +160,7 @@ footer {
   dt::after {
     content: ':';
 }
-a {
-  color: rgb(248, 8, 168);;
-  text-decoration: none;
-}
 
-a:hover{
-  text-decoration: underline;
-}
 
 /* Table */
 thead th,tbody th,tfoot td, tfoot th{
