@@ -57,7 +57,7 @@ html {
     
     h1,h2,h3,h4,h5,h6 {
       font-family: Montaga, sans-serif;
-      letter-spacing: 3px;
+      line-height: normal;
     }
     h2,h3,h4,h5,h6{
       color: rgb(248, 8, 168);
@@ -72,6 +72,21 @@ html {
       background-color: rgb(255, 255, 255);
       box-shadow: 3px 3px 2px rgba(19, 1, 13, 0.3);
     }
+    
+    .paperclip {
+      background: none;
+      box-shadow: none;
+      width: 20%;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+    }
+    
+    div.bio a {
+      display: block;
+      position: relative;
+    }
+    
       
     ::selection{
       color: azure;
@@ -140,7 +155,55 @@ iframe {
     border: 0;
     border-bottom: 3px dotted #800480;
   }
+
+/* Favourites Box */
+div.favourites input {
+  display: none;
+}
+div.favourites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(233, 77, 217, 0.15);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+div.favourites label {
+  order: -1;
+  padding: 1px 1em;
+}
+
+div.favourites input:checked + label {
+  border-bottom: rgb(112, 3, 70)  3px solid;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+div.favourites label + div {
+  width: 100%;
+  display: none;
+  padding: 1em;
+  box-shadow: rgb(112, 3, 70) 2px 2px 2px;
+  border-radius: 5px;
+  justify-content: center;
+  background-color: rgb(112, 3, 70);
+}
+
+div.favourites input:checked + label + div {
+  display: flex;
+  background-color: rgba(26, 7, 71, 0.15);
+  justify-content: center;
+  width: 100%;
+}
+div.favourites label:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 4px solid transparent;
+  border-bottom: rgb(112, 3, 70) 3px solid;
   
+}
+
 /* Footer*/
 footer {
   font-size: 75%;
@@ -148,10 +211,16 @@ footer {
 
   footer ~ a {
     text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    margin-left: -25px;
+    position: sticky;
+    bottom: 10px;
+    display: inline-block;  
   }
   
   footer ~ a:hover {
     text-decoration: none;
+    transform: rotate(45deg);
+    
   }
   footer hr {
     width: 50vw;
@@ -227,7 +296,31 @@ dt::after {
   content: ":";
 }
 
+div.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+div.gallery a img {
+  border-radius: 0%;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0em;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+a.row-span-2 {
+  grid-row: span 2;
+}
+a.col-span-2 {
+  grid-column: span 2;
+}
 
+div.gallery a:hover {
+  transform: scale(1.1);
+}
 
 
 
