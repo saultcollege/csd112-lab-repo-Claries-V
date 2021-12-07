@@ -36,8 +36,9 @@ html {
     text-decoration: underline;
   }
   .bio {
-    column-count: 3;
+    column-width: 13em;
     column-gap: 2em;
+    position: relative;
   }
   
   .bio table {
@@ -83,7 +84,7 @@ html {
     }
     
     div.bio a {
-      display: block;
+      display: inline-block;
       position: relative;
     }
     
@@ -203,6 +204,25 @@ div.favourites label:hover {
   border-bottom: rgb(112, 3, 70) 3px solid;
   
 }
+@media screen and (max-width: 800px) {
+  div.favourites {
+    flex-direction: column;
+  }
+  div.favourites label {
+    order: 0;
+    text-align: center;
+    padding: 0;
+  }
+  input:checked + label + div {
+    background-color: rgb(252, 200, 209);
+    margin: 0;
+    border-radius: 10px;
+  }
+  div.favourites input:checked + label {
+    margin: 0;
+    border-radius: 15px;
+  }
+}
 
 /* Footer*/
 footer {
@@ -259,6 +279,34 @@ th, td {
     border-collapse: collapse;
     caption-side: bottom;
   }
+
+  @media screen and (max-width: 600px) {
+    thead td,
+    tfoot td,
+    th {
+      display: none;
+    }
+    td {
+      display: block;
+      padding: 0 1rem;
+    }
+  
+    table {
+      caption-side: top;
+    }
+    tr td:first-child {
+      padding-top: 0.3em;
+      font-weight: bold;
+    }
+    tr td:last-child {
+      padding-bottom: 0.3em;
+      font-style: italic;
+      font-size: 0.8em;
+    }
+  
+    tr td:last-child::after {
+      content: "hrs/wk";
+    }
   
 /* Form Styling */
 label {
@@ -298,7 +346,7 @@ dt::after {
 
 div.gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-gap: 10px;
 }
 div.gallery a img {
@@ -314,14 +362,20 @@ div.gallery a img {
 a.row-span-2 {
   grid-row: span 2;
 }
+@media screen and (max-width: 450px) {
 a.col-span-2 {
-  grid-column: span 2;
+  grid-column: span 1;
+}
+
+div.gallery a {
+  transition: transform 200ms;
+  opacity: 0.5;
 }
 
 div.gallery a:hover {
   transform: scale(1.1);
+  opacity: 1;
 }
-
 
 
 

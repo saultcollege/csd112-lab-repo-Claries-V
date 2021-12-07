@@ -21,12 +21,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
     <style>
-        img {
-            margin: 1em;
-        }
-
         footer {
             clear: both;
+        }
+
+        div img.right {
+            float: right;
+            margin: 0em 1em 1em 1em;
+        }
+
+        div img.left {
+            float: left;
+            margin: 0em 1em 1em 0em;
+        }
+
+        @media screen and (max-width: 600px) {
+            div img.right {
+                float: none;
+                display: block;
+            }
+
+            div img.left {
+                float: none;
+                display: block;
+            }
         }
     </style>
     <title>
@@ -38,6 +56,8 @@
     <div class="width-wrap">
         <header id="top">
             <nav>
+                <input type="checkbox" id="menu-toggle" name="menu" />
+                <label class="sandwich-icon" for="menu-toggle"></label>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="links.html">Links</a></li>
@@ -52,7 +72,7 @@
         <main>
             <h1>Lorem Ipsum</h1>
             <p>
-                <img style="float: left;" src="https://loremflickr.com/320/240 " />
+                <img class="left" src="https://loremflickr.com/320/240 " />
                 Pastry shortbread sesame snaps marzipan carrot cake icing tootsie roll. Chocolate bar bear
                 claw lemon drops fruitcake macaroon ice cream dessert cake pastry. Tart marshmallow
                 chupa chups jelly beans cheesecake candy canes topping chocolate cake. Cake gummies
@@ -89,7 +109,7 @@
                 plum marshmallow.
             </p>
             <p>
-                <img style="float: right;" src="https://loremflickr.com/320/240?" />
+                <img class="right" src="https://loremflickr.com/320/240?" />
                 Lollipop lemon drops marshmallow muffin cheesecake bonbon biscuit. Carrot cake apple
                 pie wafer liquorice biscuit jujubes ice cream chocolate cake topping. Lollipop cak
                 liquorice pastry dragée oat cake chocolate cookie. Candy canes halvah donut
