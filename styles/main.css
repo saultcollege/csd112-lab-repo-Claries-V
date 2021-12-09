@@ -11,19 +11,20 @@ body {
   line-height: 1.3;
   background-color: #9f56a0;
   color: rgb(141, 7, 7);
-
 }
   
   
 .width-wrap {
   background-color: rgba(241, 237, 237, 0.918);
-  margin: auto auto 3em auto;
+  margin: auto;
   box-sizing: border-box;
   max-width: 960px;
   border: 1px solid rgba(0,0,0,0.3);
-  border-top width: 0;
+  border-top-width: 0;
   padding: 0 2em 2em 2em;
+  margin-bottom: 3em;
 }
+
 ol {
   list-style-type:upper-roman;
 }
@@ -52,8 +53,7 @@ h1{
   background: linear-gradient(0deg, rgb(231, 173, 212) 0%, rgb(248, 8, 168) 0%, rgb(92, 4, 92) 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(0, 0, 0, 0);
-      
+  color: rgba(0, 0, 0, 0);    
 }
     
 h1,h2,h3,h4,h5,h6 {
@@ -102,22 +102,22 @@ header{
 
 nav {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
-  padding-left: 0em;
-  padding-right: 0em;
-  margin-left: -2em;
-  margin-right: -2em;
-    
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-bottom: 0.5em;
+  box-sizing: inherit; 
 }
 
 nav ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
   display: flex;
   justify-content: center;
 }
 
 nav ul li {
-  list-style-type: none;
+  display: inline;
 }
 
 nav ul li a {
@@ -127,7 +127,7 @@ nav ul li a {
   padding-top: 1em;
   padding-bottom: 0.5em;
   display: inline-block;
-  margin: -4px 1em 0 1em;
+  margin-top: -4px;
   border-top: 4px solid transparent;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -140,24 +140,7 @@ nav ul li a:hover {
   border-top: 4px solid #b41717;
   text-decoration: none;
 }
-@media screen and (max-width: 450px) {
-nav ul {
-  flex-direction: column;
-  align-items: center;
-  height: 0;
-  overflow: hidden;
-  transition: height 200ms;
-}
-nav ul li a {
-  padding-top: 0.5em;
-  border-top: none;
-}
-nav ul li a:hover {
-  padding-top: 0.5em;
-  border-top-color: none;
-  text-decoration: underline;
-  }
-}
+
 iframe {
   border-top-right-radius: 2em;
   border-bottom-left-radius: 2em;
@@ -242,20 +225,21 @@ div.favourites input:checked + label {
 /* Footer*/
 footer {
   font-size: 75%;
-  text-align: center;}
+  text-align: center;
+}
 
 footer ~ a {
   text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
   margin-left: -25px;
   position: sticky;
   bottom: 10px;
-  display: inline-block;  
+  display: inline-block; 
+  transition: transform 200ms; 
 }
   
 footer ~ a:hover {
   text-decoration: none;
-  transform: rotate(45deg);
-    
+  transform: rotate(45deg);   
 }
 footer hr {
   width: 50vw;
@@ -299,6 +283,7 @@ table {
 thead td,tfoot td,th {
   display: none;
 }
+
 td {
   display: block;
   padding: 0 1rem;
@@ -368,12 +353,14 @@ div.gallery img {
   display: block;
   width: 100%;
   height: 100%;
+  padding: 0em;
   object-fit: cover;
 }
 
 div.gallery a {
   transition: scale 200ms;
 }
+
 
 div.gallery a:hover {
   scale: 1.1;
@@ -388,9 +375,32 @@ div.gallery .col-span-2 {
 }
 
 @media screen and (max-width: 450px) {
-div.gallery .col-span-2 {
-  grid-column: span 1;
+  div.gallery .col-span-2 {
+    grid-column: span 1;
   }
+}
+
+nav ul {
+  flex-direction: column;
+  align-items: center;
+  transition: height 200ms;
+  height: 0;
+  overflow: hidden;
+}
+
+header nav ul li a {
+  padding-top: 0.5em;
+  border-top: none;
+}
+
+nav ul li a:hover {
+  padding-top: 0.5em;
+  border-top-color: none;
+  text-decoration: underline;
+  }
+}
+header nav ul li a {
+  transform: translate(2px,0);
 }
 
 nav input {
@@ -400,58 +410,54 @@ nav label {
   display: none;
 }
 
-@media screen and (max-width: 800px) {
-label.sandwich-icon {
-  display: block;
-  width: 40px;
-   height: 25px;
-  transition: border-top 200ms;
-  border-top: 5px solid rgb(1, 190, 181);
-  cursor: pointer;
-  margin: 1em auto;
-  position: relative;
-}
+@media screen and (max-width: 600px) {
+  label.sandwich-icon {
+    display: block;
+    width: 40px;
+    height: 25px;
+    transition: border-top 200ms;
+    border-top: 5px solid rgb(1, 190, 181);
+    cursor: pointer;
+    margin: 1em auto;
+    position: relative;
+  }
 
-label.sandwich-icon::before {
-  content: "";
-  display: block;
-  width: 40px;
-  border-top: 5px solid rgb(1, 190, 181);
-  position: absolute;
-  top: 5px;
-  transition: transform 200ms;
-}
+  label.sandwich-icon::before {
+    content: "";
+    display: block;
+    width: 40px;
+    border-top: 5px solid rgb(1, 190, 181);
+    position: absolute;
+    top: 5px;
+    transition: transform 200ms;
+  }
 
-label.sandwich-icon::after {
-  content: "";
-  display: block;
-  width: 40px;
-  border-top: 5px solid rgb(1, 190, 181);
-  position: absolute;
-  top: 15px;
-  transition: transform 200ms;
-}
+  label.sandwich-icon::after {
+    content: "";
+    display: block;
+    width: 40px;
+    border-top: 5px solid rgb(1, 190, 181);
+    position: absolute;
+    top: 15px;
+    transition: transform 200ms;
+  }
   
-nav input[id="menu-toggle"]:checked + label + ul {
-  height: 220px;
-}
+  nav input[id="menu-toggle"]:checked + label + ul {
+    height: 200px;
+  }
 
-nav input[id="menu-toggle"]:checked + label {
-  transition: border-top 500ms;
-  border-top: transparent;
-}
+  nav input[id="menu-toggle"]:checked + label {
+    transition: border-top 500ms;
+    border-top: transparent;
+  }
 
-nav input[id="menu-toggle"]:checked + label::before {
-  display: block;
-  transform: rotate(-45deg) translate(-3px,4px);
-}
-}
+  nav input[id="menu-toggle"]:checked + label::before {
+    display: block;
+    transform: rotate(-45deg) translate(-3px,4px);
+  }
 
-nav input[id="menu-toggle"]:checked + label::after {
-  display: block;
-  transform: rotate(45deg) translate(-3px,-4px);
-}
-}
-header nav ul li a {
-  transform: translate(2px,0);
+  nav input[id="menu-toggle"]:checked + label::after {
+    display: block;
+    transform: rotate(45deg) translate(-3px,-4px);
+  }
 }
