@@ -100,6 +100,7 @@ header{
   margin-right: -2em;   
 }
 
+
 nav {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
   margin-left: 2em;
@@ -140,6 +141,7 @@ nav ul li a:hover {
   border-top: 4px solid #b41717;
   text-decoration: none;
 }
+
 
 iframe {
   border-top-right-radius: 2em;
@@ -320,7 +322,6 @@ form ul {
   list-style-type: none;
 }
 
-
 *[type="submit"] {
   border: none;
   padding: 1em 3em;
@@ -333,8 +334,8 @@ form ul {
 
 input:invalid {
   background-color: rgba(245, 212, 185, 0.137);
+  }
 }
-
 
 /* Glossary */
 
@@ -378,7 +379,7 @@ div.gallery .col-span-2 {
   div.gallery .col-span-2 {
     grid-column: span 1;
   }
-}
+
 
 nav ul {
   flex-direction: column;
@@ -397,10 +398,11 @@ nav ul li a:hover {
   padding-top: 0.5em;
   border-top-color: none;
   text-decoration: underline;
-  }
 }
+
 header nav ul li a {
   transform: translate(2px,0);
+}
 }
 
 nav input {
@@ -410,7 +412,7 @@ nav label {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
   label.sandwich-icon {
     display: block;
     width: 40px;
@@ -420,7 +422,8 @@ nav label {
     cursor: pointer;
     margin: 1em auto;
     position: relative;
-  }
+}
+}
 
   label.sandwich-icon::before {
     content: "";
@@ -460,4 +463,4 @@ nav label {
     display: block;
     transform: rotate(45deg) translate(-3px,-4px);
   }
-}
+  
