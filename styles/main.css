@@ -6,120 +6,118 @@ html {
 *::before{
   box-sizing: inherit;
 }
-  body {
-    font-family: segoe ui, sans-serif;
-    line-height: 1.3;
-      background-color: #9f56a0;
-      color: rgb(141, 7, 7);
+body {
+  font-family: segoe ui, sans-serif;
+  line-height: 1.3;
+  background-color: #9f56a0;
+  color: rgb(141, 7, 7);
 
-  }
+}
   
   
-  .width-wrap{
-    background-color: rgba(241, 237, 237, 0.918);
-    margin: auto auto 3em auto;
-    box-sizing: border-box;
-    max-width: 960px;
-    border: 1px solid rgba(0,0,0,0.3);
-    border-top: unset;
-    padding: 0 2em 2em 2em;
-  }
-  ol {
-    list-style-type:upper-roman;
-  }
-  a {
-    color: rgb(248, 8, 168);;
-    text-decoration: none;
-  }
+.width-wrap {
+  background-color: rgba(241, 237, 237, 0.918);
+  margin: auto auto 3em auto;
+  box-sizing: border-box;
+  max-width: 960px;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-top width: 0;
+  padding: 0 2em 2em 2em;
+}
+ol {
+  list-style-type:upper-roman;
+}
+a {
+  color: rgb(248, 8, 168);;
+  text-decoration: none;
+}
   
-  a:hover{
-    text-decoration: underline;
-  }
-  .bio {
-    column-width: 13em;
-    column-gap: 2em;
-    position: relative;
-  }
+a:hover{
+  text-decoration: underline;
+}
+.bio {
+  column-width: 13em;
+  column-gap: 2em;
+  position: relative;
+}
   
-  .bio table {
-    column-span: all;
-    margin-top: 1em;
-    border-collapse: collapse;
-    caption-side: bottom;
-  }
-    h1{
-      background: rgb(5, 5, 5);
-      background: linear-gradient(0deg, rgb(231, 173, 212) 0%, rgb(248, 8, 168) 0%, rgb(92, 4, 92) 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: rgba(0, 0, 0, 0);
+.bio table {
+  column-span: all;
+  margin-top: 1em;
+  border-collapse: collapse;
+  caption-side: bottom;
+}
+h1{
+  background: rgb(5, 5, 5);
+  background: linear-gradient(0deg, rgb(231, 173, 212) 0%, rgb(248, 8, 168) 0%, rgb(92, 4, 92) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
       
-    }
+}
     
-    h1,h2,h3,h4,h5,h6 {
-      font-family: Montaga, sans-serif;
-      line-height: normal;
-    }
-    h2,h3,h4,h5,h6{
-      color: rgb(248, 8, 168);
-    }
+h1,h2,h3,h4,h5,h6 {
+  font-family: Montaga, sans-serif;
+  line-height: normal;
+}
+h2,h3,h4,h5,h6{
+  color: rgb(248, 8, 168);
+}
 
-    img {
-      max-width: 100%;
-    }
+img {
+  max-width: 100%;
+}
     
-    div.bio img:first-of-type {
-      padding: 2%;
-      background-color: rgb(255, 255, 255);
-      box-shadow: 3px 3px 2px rgba(19, 1, 13, 0.3);
-    }
+div.bio img:first-of-type {
+  padding: 2%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 2px rgba(19, 1, 13, 0.3);
+}
     
-    .paperclip {
-      background: none;
-      box-shadow: none;
-      width: 20%;
-      position: absolute;
-      top: -8px;
-      right: -8px;
-    }
+.paperclip {
+  background: none;
+  box-shadow: none;
+  width: 20%;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
     
-    div.bio a {
-      display: inline-block;
-      position: relative;
-    }
+div.bio a {
+  display: inline-block;
+  position: relative;
+}
     
       
-    ::selection{
-      color: azure;
-      background-color: #953fa0;
-    }
+::selection{
+  color: azure;
+  background-color: #953fa0;
+}
 
-    header{
-      border-top: 4px solid rgba(0,0,0,0.1);
-      margin-left: -2em;
-      margin-right: -2em;   
-  }
+header{
+  border-top: 4px solid rgba(0,0,0,0.1);
+  margin-left: -2em;
+  margin-right: -2em;   
+}
 
-  nav {
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
-    padding-left: 0em;
-    padding-right: 0em;
-    margin-left: 2em;
-    margin-right: 2em;
-    box-sizing: inherit;
+nav {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  padding-left: 0em;
+  padding-right: 0em;
+  margin-left: -2em;
+  margin-right: -2em;
+    
 }
 
 nav ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
   display: flex;
   justify-content: center;
 }
 
 nav ul li {
-  display: inline;
+  list-style-type: none;
 }
 
 nav ul li a {
@@ -142,20 +140,37 @@ nav ul li a:hover {
   border-top: 4px solid #b41717;
   text-decoration: none;
 }
-
+@media screen and (max-width: 450px) {
+nav ul {
+  flex-direction: column;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  transition: height 200ms;
+}
+nav ul li a {
+  padding-top: 0.5em;
+  border-top: none;
+}
+nav ul li a:hover {
+  padding-top: 0.5em;
+  border-top-color: none;
+  text-decoration: underline;
+  }
+}
 iframe {
   border-top-right-radius: 2em;
   border-bottom-left-radius: 2em;
 }
-  hr {
-    width: 50vw;
-    min-width: 300px;
-    max-width: 890px;
-    margin-top: 3em;
-    margin-bottom: 2em;
-    border: 0;
-    border-bottom: 3px dotted #800480;
-  }
+hr {
+  width: 50vw;
+  min-width: 300px;
+  max-width: 890px;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  border: 0;
+  border-bottom: 3px dotted #800480;
+}
 
 /* Favourites Box */
 div.favourites input {
@@ -205,23 +220,23 @@ div.favourites label:hover {
   
 }
 @media screen and (max-width: 800px) {
-  div.favourites {
-    flex-direction: column;
-  }
-  div.favourites label {
-    order: 0;
-    text-align: center;
-    padding: 0;
-  }
-  input:checked + label + div {
-    background-color: rgb(252, 200, 209);
-    margin: 0;
-    border-radius: 10px;
-  }
-  div.favourites input:checked + label {
-    margin: 0;
-    border-radius: 15px;
-  }
+div.favourites {
+  flex-direction: column;
+}
+div.favourites label {
+  order: 0;
+  text-align: center;
+  padding: 0;
+}
+input:checked + label + div {
+  background-color: rgb(252, 200, 209);
+  margin: 0;
+  border-radius: 10px;
+}
+div.favourites input:checked + label {
+  margin: 0;
+  border-radius: 15px;
+}
 }
 
 /* Footer*/
@@ -229,31 +244,31 @@ footer {
   font-size: 75%;
   text-align: center;}
 
-  footer ~ a {
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
-    margin-left: -25px;
-    position: sticky;
-    bottom: 10px;
-    display: inline-block;  
-  }
+footer ~ a {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  margin-left: -25px;
+  position: sticky;
+  bottom: 10px;
+  display: inline-block;  
+}
   
-  footer ~ a:hover {
-    text-decoration: none;
-    transform: rotate(45deg);
+footer ~ a:hover {
+  text-decoration: none;
+  transform: rotate(45deg);
     
-  }
-  footer hr {
-    width: 50vw;
-    min-width: 300px;
-    max-width: 890px;
-    margin-top: 3em;
-    margin-bottom: 2em;
-    border: 0;
-    border-bottom: 3px dotted palevioletred;
-  }
+}
+footer hr {
+  width: 50vw;
+  min-width: 300px;
+  max-width: 890px;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  border: 0;
+  border-bottom: 3px dotted palevioletred;
+}
 
-  dt::after {
-    content: ':';
+dt::after {
+  content: ':';
 }
 
 
@@ -264,49 +279,47 @@ thead th,tbody th,tfoot td, tfoot th{
 
 th, td {
   padding: 0.3em 1em 0.3em 1em;
-  }
+}
   
-  td {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
+td {
+  background-color: rgba(0, 0, 0, 0.05);
+}
   
-  tbody tr:nth-child(even) td {
-    background-color: rgba(0,0,0,0.15);
-  }
+tbody tr:nth-child(even) td {
+  background-color: rgba(0,0,0,0.15);
+}
   
-  table {
-    margin-top: 1em;
-    border-collapse: collapse;
-    caption-side: bottom;
-  }
+table {
+  margin-top: 1em;
+  border-collapse: collapse;
+  caption-side: bottom;
+}
 
-  @media screen and (max-width: 600px) {
-    thead td,
-    tfoot td,
-    th {
-      display: none;
-    }
-    td {
-      display: block;
-      padding: 0 1rem;
-    }
+@media screen and (max-width: 600px) {
+thead td,tfoot td,th {
+  display: none;
+}
+td {
+  display: block;
+  padding: 0 1rem;
+}
   
-    table {
-      caption-side: top;
-    }
-    tr td:first-child {
-      padding-top: 0.3em;
-      font-weight: bold;
-    }
-    tr td:last-child {
-      padding-bottom: 0.3em;
-      font-style: italic;
-      font-size: 0.8em;
-    }
+table {
+  caption-side: top;
+}
+tr td:first-child {
+  padding-top: 0.3em;
+  font-weight: bold;
+}
+tr td:last-child {
+  padding-bottom: 0.3em;
+  font-style: italic;
+  font-size: 0.8em;
+}
   
-    tr td:last-child::after {
-      content: "hrs/wk";
-    }
+tr td:last-child::after {
+  content: "hrs/wk";
+}
   
 /* Form Styling */
 label {
@@ -347,36 +360,98 @@ dt::after {
 div.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  grid-gap: 10px;
+  row-gap: 10px;
+  column-gap: 10px;
 }
-div.gallery a img {
-  border-radius: 0%;
-  background-color: transparent;
-  box-shadow: none;
-  padding: 0em;
+
+div.gallery img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-a.row-span-2 {
-  grid-row: span 2;
-}
-@media screen and (max-width: 450px) {
-a.col-span-2 {
-  grid-column: span 1;
-}
 
 div.gallery a {
-  transition: transform 200ms;
-  opacity: 0.5;
+  transition: scale 200ms;
 }
 
 div.gallery a:hover {
-  transform: scale(1.1);
-  opacity: 1;
+  scale: 1.1;
 }
 
+div.gallery .row-span-2 {
+  grid-row: span 2;
+}
 
+div.gallery .col-span-2 {
+  grid-column: span 2;
+}
 
+@media screen and (max-width: 450px) {
+div.gallery .col-span-2 {
+  grid-column: span 1;
+  }
+}
 
+nav input {
+  display: none;
+}
+nav label {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+label.sandwich-icon {
+  display: block;
+  width: 40px;
+   height: 25px;
+  transition: border-top 200ms;
+  border-top: 5px solid rgb(1, 190, 181);
+  cursor: pointer;
+  margin: 1em auto;
+  position: relative;
+}
+
+label.sandwich-icon::before {
+  content: "";
+  display: block;
+  width: 40px;
+  border-top: 5px solid rgb(1, 190, 181);
+  position: absolute;
+  top: 5px;
+  transition: transform 200ms;
+}
+
+label.sandwich-icon::after {
+  content: "";
+  display: block;
+  width: 40px;
+  border-top: 5px solid rgb(1, 190, 181);
+  position: absolute;
+  top: 15px;
+  transition: transform 200ms;
+}
+  
+nav input[id="menu-toggle"]:checked + label + ul {
+  height: 220px;
+}
+
+nav input[id="menu-toggle"]:checked + label {
+  transition: border-top 500ms;
+  border-top: transparent;
+}
+
+nav input[id="menu-toggle"]:checked + label::before {
+  display: block;
+  transform: rotate(-45deg) translate(-3px,4px);
+}
+}
+
+nav input[id="menu-toggle"]:checked + label::after {
+  display: block;
+  transform: rotate(45deg) translate(-3px,-4px);
+}
+}
+header nav ul li a {
+  transform: translate(2px,0);
+}
